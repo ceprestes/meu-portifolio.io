@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+  <title>Portofólio - Descomplica</title>
+</head>
+<body>
+  <header class="container-fluid bg-dark text-light shadow">
+    <nav class="container navbar navbar-expand-lg justify-content-center">
+      <div class="card-group w-100">
+        <div class="card align-content-center border-dark">
+          <div class="figure bg-dark">
+            <img class="figure-img shadow-lg rounded-circle mx-auto d-block" width="150" src="./src/img/IMG-20221220-WA0036-280x405.png" alt="Foto de Carlos Prestes">
+            <div class="figure-caption text-light text-center">
+              <h2>Carlos Prestes</h2>
+              <p>Desenvolvedor Web</p>
+            </div>
+          </div>
+        </div>
+        <div class="card border-dark bg-dark card-text justify-content-end">
+          <div class="card border-dark bg-dark text-light justify-content-end">
+            <h1>Portofólio - Descomplica</h1>
+          </div>
+          <ul class="navbar-nav fs-5 justify-content-center">
+            <li class="nav-item"><a class="nav-link link-light active" href="#SobreMim">Sobre mim</a></li>
+            <li class="nav-item"><a class="nav-link link-light active" href="#Habilidades">Habilidades</a></li>
+            <li class="nav-item"><a  class="nav-link link-light active" href="#Contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container p-5 bg-body shadow" id="SobreMim">
+    <h1 class="text-center">Quem sou eu?</h1>
+      <div class="text-body m-5 d-block">
+        <p><b>Nome:</b> Carlos Prestes <br />
+        <b>Idade:</b> 43 anos<br />
+        <b>Formação:</b> Análise e Desenvolvimento de Sistemas<br />
+        <b>Experiência:</b> Trabalhei como desenvolvedor web por 3 anos e tenho conhecimentos em HTML, CSS, JavaScript e SQL.</p>
+      </div> 
+  </section>
+
+  <section class="container w-50 p-5" id="Habilidades">
+    <div class="card-group row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <div class="card p-1 w-75 h-100 shadow">
+          <div class="card-body">
+            <h2 class="card-title">Características</h2>
+            <ul class="list-unstyled ">
+              <li>Integração e adaptação</li>
+              <li>Comunicação assertiva</li>
+              <li>Pesquisa e desenvolvimento</li>
+              <li>Comprometimento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-1 w-75 h-100 shadow">
+          <div class="card-body">
+            <h2>Habilidades</h2>
+            <ul class="list-unstyled">
+              <li>Scrum</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>        
+    </div>
+  </section>
+
+  <section class="container w-50 p-5 shadow" id="Contato">
+    <form>
+      <fieldset>
+        <legend><h1 class="text-center p-5">Contact</h1></legend>
+        <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name">
+        </div>
+        <div class="mb-3">
+          <fieldset>
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" required name="email" id="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="mb-3 align-content-end justify-content-end text-end">
+          <input type="reset" class="btn btn-danger w-25" value="Reset">
+          <input type="submit" class="btn btn-primary w-25" value="Send">
+        </div>
+      </fieldset>
+    </form>
+  </section> 
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <br /><br />
+  <footer>
+    <div>
+      <p>Desenvolvido por Carlos Prestes &COPY; 2023</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script>
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+</body>
+</html>
